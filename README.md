@@ -1,4 +1,4 @@
-# 🤝 DoaFácil
+# DoaFácil
 
 Plataforma web para gerenciamento de doações e consulta de instituições beneficentes.
 
