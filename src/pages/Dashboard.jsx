@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo-doafacil.png";
+import logo from "../assets/logo-doaFacil.png";
 
 export default function Dashboard() {
   const navigate = useNavigate();

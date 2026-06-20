@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabase";
 import BotaoVoltar from "../components/BotaoVoltar";
-import logo from "../assets/logo-doafacil.png";
+import logo from "../assets/logo-doaFacil.png";
 
 export default function Cadastro() {
   const navigate = useNavigate();

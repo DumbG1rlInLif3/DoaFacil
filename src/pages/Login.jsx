@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/logo-doafacil.png";
+import Logo from "../assets/logo-doaFacil.png";
 
 export default function Login() {
   const navigate = useNavigate();
