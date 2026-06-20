@@ -1,16 +1,132 @@
-# React + Vite
+# 🤝 DoaFácil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma web para gerenciamento de doações e consulta de instituições beneficentes.
 
-Currently, two official plugins are available:
+## 📖 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O DoaFácil foi desenvolvido como Projeto de Extensão do curso de Análise e Desenvolvimento de Sistemas, integrando conceitos de:
 
-## React Compiler
+- Laboratório de Software
+- Desenvolvimento Web
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo da aplicação é facilitar a organização de doações e aproximar doadores de instituições beneficentes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Problema
+
+Muitas pessoas desejam realizar doações, porém enfrentam dificuldades para:
+
+- Encontrar instituições confiáveis;
+- Organizar os itens disponíveis para doação;
+- Acompanhar o status das doações realizadas.
+
+O DoaFácil busca solucionar esse problema por meio de uma plataforma simples e intuitiva.
+
+---
+
+## ✨ Funcionalidades
+
+- Cadastro de usuários
+- Login
+- Cadastro de doações
+- Visualização de doações
+- Alteração de status para "Entregue"
+- Consulta de instituições
+- Perfil do usuário
+- Interface responsiva
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Front-End
+
+- React
+- Vite
+- JavaScript
+- CSS3
+
+### Banco de Dados
+
+- Supabase
+- PostgreSQL
+
+### Versionamento
+
+- Git
+- GitHub
+
+### Deploy
+
+- Vercel
+
+---
+
+## 🏗️ Arquitetura
+
+```text
+React + Vite
+      │
+      ▼
+ Supabase
+(PostgreSQL)
+      │
+      ▼
+  Vercel
+```
+
+---
+
+## 📸 Telas do Sistema
+
+### Login
+
+(Adicionar print)
+
+### Dashboard
+
+(Adicionar print)
+
+### Minhas Doações
+
+(Adicionar print)
+
+### Instituições
+
+(Adicionar print)
+
+---
+
+## 🚀 Aplicação Online
+
+https://doa-facil-self.vercel.app
+
+---
+
+## 💻 Repositório
+
+https://github.com/DumbG1rlInLif3/DoaFacil
+
+---
+
+## 📚 Documentação
+
+O projeto contempla:
+
+- Levantamento de Requisitos
+- Casos de Uso
+- Diagrama de Classes
+- Wireframes
+- Banco de Dados
+- Implementação
+- Testes
+- Deploy
+
+---
+
+## 👩‍💻 Desenvolvedora
+
+Jennifer Stefany
+
+Projeto desenvolvido para fins acadêmicos no curso de Análise e Desenvolvimento de Sistemas.
