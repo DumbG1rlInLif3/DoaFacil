@@ -76,40 +76,6 @@ React + Vite
   Vercel
 ```
 
----
-
-## 📸 Telas do Sistema
-
-### Login
-
-(Adicionar print)
-
-### Dashboard
-
-(Adicionar print)
-
-### Minhas Doações
-
-(Adicionar print)
-
-### Instituições
-
-(Adicionar print)
-
----
-
-## 🚀 Aplicação Online
-
-https://doa-facil-self.vercel.app
-
----
-
-## 💻 Repositório
-
-https://github.com/DumbG1rlInLif3/DoaFacil
-
----
-
 ## 📚 Documentação
 
 O projeto contempla:
