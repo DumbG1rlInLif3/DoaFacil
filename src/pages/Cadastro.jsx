@@ -1,81 +1,72 @@
-// import { useState } from "react";
-// import { useEffect } from "react";
-// import { supabase } from "../services/supabase";
-
-import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabase";
+import BotaoVoltar from "../components/BotaoVoltar";
+import logo from "../assets/logo-doafacil.png";
 
 export default function Cadastro() {
-  useEffect(() => {
-    async function teste() {
-      const { data, error } = await supabase
-        .from("instituicoes")
-        .select("*");
+  const navigate = useNavigate();
 
-      console.log("Dados:", data);
-      console.log("Erro:", error);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  async function cadastrar(e) {
+    e.preventDefault();
+
+    const { error } = await supabase
+      .from("usuarios")
+      .insert([
+        {
+          nome,
+          email,
+          senha,
+        },
+      ]);
+
+    if (error) {
+      alert(error.message);
+      return;
     }
 
-    teste();
-  }, []);
+    alert("Cadastro realizado com sucesso!");
+
+    navigate("/");
+  }
 
   return (
-    <div>
-      <h1>Cadastro</h1>
-      <p>Teste de conexão com Supabase.</p>
+    <div className="container">
+      <BotaoVoltar />
+      <img src={logo} alt="DoaFácil" className="logo" />
+      <div className="card">
+        <h1>Cadastro</h1>
+
+        <form onSubmit={cadastrar}>
+          <input
+            placeholder="Nome"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+          />
+
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
+
+          <button type="submit">
+            Cadastrar
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
-// export default function Cadastro() {
-//   const [nome, setNome] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [senha, setSenha] = useState("");
-
-//   async function cadastrar() {
-//     const { error } = await supabase
-//       .from("usuarios")
-//       .insert([
-//         {
-//           nome,
-//           email,
-//           senha,
-//         },
-//       ]);
-
-//     if (!error) {
-//       alert("Usuário cadastrado!");
-//     }
-//   }
-
-//   return (
-//     <div className="container">
-//       <h2>Cadastro</h2>
-
-//       <input
-//         placeholder="Nome"
-//         onChange={(e) =>
-//           setNome(e.target.value)
-//         }
-//       />
-
-//       <input
-//         placeholder="Email"
-//         onChange={(e) =>
-//           setEmail(e.target.value)
-//         }
-//       />
-
-//       <input
-//         type="password"
-//         placeholder="Senha"
-//         onChange={(e) =>
-//           setSenha(e.target.value)
-//         }
-//       />
-
-//       <button onClick={cadastrar}>
-//         Cadastrar
-//       </button>
-//     </div>
-//   );
-//}

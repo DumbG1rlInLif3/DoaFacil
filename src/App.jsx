@@ -8,6 +8,7 @@ import NovaDoacao from "./pages/NovaDoacao";
 import MinhasDoacoes from "./pages/MinhasDoacoes";
 import Instituicoes from "./pages/Instituicoes";
 import Perfil from "./pages/Perfil";
+import "./styles/global.css";
 
 function App() {
   return (

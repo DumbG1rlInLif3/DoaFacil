@@ -1,33 +1,56 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import Logo from "../assets/logo-doafacil.png";
 
 export default function Login() {
   const navigate = useNavigate();
 
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  function entrar(e) {
+    e.preventDefault();
+
+    if (!email || !senha) {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    navigate("/dashboard");
+  }
+
   return (
     <div className="container">
-      <h1>DoaFácil</h1>
+      <img src={Logo} alt="DoaFácil" className="logo" />
+      <div className="card">
+        <h1>DoaFácil</h1>
+        <p>Faça a diferença através da doação.</p>
 
-      <input
-        type="email"
-        placeholder="E-mail"
-      />
+        <form onSubmit={entrar}>
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-      <input
-        type="password"
-        placeholder="Senha"
-      />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
 
-      <button
-        onClick={() => navigate("/dashboard")}
-      >
-        Entrar
-      </button>
+          <button type="submit">
+            Entrar
+          </button>
+        </form>
 
-      <p
-        onClick={() => navigate("/cadastro")}
-      >
-        Criar conta
-      </p>
+        <p>
+          Não possui conta?
+          <Link to="/cadastro"> Cadastre-se</Link>
+        </p>
+      </div>
     </div>
   );
 }
