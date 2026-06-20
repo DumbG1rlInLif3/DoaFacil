@@ -76,6 +76,8 @@ React + Vite
   Vercel
 ```
 
+---
+
 ## 📚 Documentação
 
 O projeto contempla:
