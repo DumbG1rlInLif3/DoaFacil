@@ -8,4 +8,6 @@ export async function testarSupabase() {
 
   console.log(data);
   console.log(error);
+  
+  console.log(import.meta.env.VITE_SUPABASE_URL);
 }
